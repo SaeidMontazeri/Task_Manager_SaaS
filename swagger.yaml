@@ -1,0 +1,23 @@
+openapi: 3.0.0
+
+info:
+  title: Task Manager SaaS
+  version: 1.0.0
+  description: API documentation
+  contact:
+    name: API Support
+    url: https://caspianoxin.ir/contact/
+    email: saeidmontazeri@outlook.com
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+security:
+  - bearerAuth: []
+
+servers:
+  - url: http://localhost:3000
