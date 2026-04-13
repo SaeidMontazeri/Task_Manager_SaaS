@@ -10,12 +10,12 @@ const helmet = require("helmet");
 const session = require("express-session");
 const swaggerUi = require("swagger-ui-express");
 require("dotenv").config();
-// const serviceAccount = require("./utilities/serviceAccountKey.json");
+// const serviceAccount = require("./src/utils/serviceAccountKey.json");
 const admin = require("firebase-admin");
 const YAML = require("yamljs");
-const allroutes = require("./routes");
+const allroutes = require("./src/routes");
 const path = require("path");
-const { morganMiddleware, logger } = require("./utilities/logger");
+const { morganMiddleware, logger } = require("./src/utils/logger");
 
 global.TextEncoder = require("util").TextEncoder;
 global.TextDecoder = require("util").TextDecoder;
@@ -84,7 +84,7 @@ class Application {
 
   // async setupRedis() {
   //   if (process.env.ISTEST != "true") {
-  //     require("./utilities/redisClient");
+  //     require("./src/utils/redisClient");
   //   }
   // }
 

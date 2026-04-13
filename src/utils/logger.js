@@ -20,7 +20,7 @@ const logger = createLogger({
   transports: [
     // چرخش فایل لاگ روزانه برای خطاها
     new DailyRotateFile({
-      filename: path.join(process.cwd(), "uploads/logs/error-%DATE%.log"), // فایل روزانه با تاریخ
+      filename: path.join(process.cwd(), "logs/error-%DATE%.log"), // فایل روزانه با تاریخ
       level: "error",
       datePattern: "YYYY-MM-DD", // فرمت تاریخ برای فایل‌ها
       zippedArchive: true, // فشرده‌سازی فایل‌ها
@@ -30,7 +30,7 @@ const logger = createLogger({
 
     // چرخش فایل لاگ روزانه برای همه چیز
     new DailyRotateFile({
-      filename: path.join(process.cwd(), "uploads/logs/combined-%DATE%.log"), // فایل روزانه با تاریخ
+      filename: path.join(process.cwd(), "logs/combined-%DATE%.log"), // فایل روزانه با تاریخ
       datePattern: "YYYY-MM-DD", // فرمت تاریخ برای فایل‌ها
       zippedArchive: true, // فشرده‌سازی فایل‌ها
       maxSize: "20m", // حد بیشترین حجم هر فایل

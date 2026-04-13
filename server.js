@@ -1,4 +1,4 @@
-const { logger } = require("./utilities/logger");
+const { logger } = require("./src/utils/logger");
 const Application = require("./app");
 
 (async () => {
